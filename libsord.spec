@@ -1,14 +1,15 @@
 Summary:	Lightweight C library for storing RDF data in memory
 Name:		libsord
-Version:	0.12.0
+Version:	0.12.2
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.drobilla.net/sord-%{version}.tar.bz2
-# Source0-md5:	0c045bd0a7a2d70974ed7287bb61f891
+# Source0-md5:	55d5866650b92ab64eda08fcc73aa425
 BuildRequires:	glib-devel
 BuildRequires:	libserd-devel >= 0.18.0
 BuildRequires:	libstdc++-devel
+BuildRequires:	pcre-devel
 BuildRequires:	pkg-config
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -63,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libsord-0.so.?
 %attr(755,root,root) %{_libdir}/libsord-0.so.*.*.*
 %{_mandir}/man1/sordi.1*
-%{_mandir}/man1/man1/sord_validate.1*
+%{_mandir}/man1/sord_validate.1*
 
 %files devel
 %defattr(644,root,root,755)
